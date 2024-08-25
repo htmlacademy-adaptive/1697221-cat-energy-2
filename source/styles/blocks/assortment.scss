@@ -1,0 +1,29 @@
+.assortment__main-list {
+  @include list-style;
+}
+
+.assortment__main-item {
+  color: $dark-grey;
+}
+
+.assortment__heading {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.assortment__additional-list {
+  @include list-style;
+}
+
+.additional-card__heading {
+  text-transform: uppercase;
+  color: special_dark-grey-2;
+}
+
+.assortment__banner {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: $basic-green;
+  color: $white;
+}

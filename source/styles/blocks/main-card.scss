@@ -1,0 +1,16 @@
+.main-card__link {
+  @include link;
+}
+
+.main-card__heading {
+  color: $special_dark-grey-2;
+}
+
+.main-card__properties {
+  @include list-style;
+}
+
+.main-card__properties-item {
+  font-size: 12px;
+  line-height: 16px;
+}

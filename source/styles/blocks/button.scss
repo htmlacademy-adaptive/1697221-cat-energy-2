@@ -1,0 +1,18 @@
+.button {
+  display: block;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+}
+
+.button--main {
+  background-color: $basic-green;
+  color: $white;
+}
+
+.button-additional {
+  background-color: $basic-grey;
+}

@@ -1,0 +1,7 @@
+.page-footer {
+  background-color: $basic-grey;
+}
+
+.page-footer__social-list {
+  @include list-style;
+}

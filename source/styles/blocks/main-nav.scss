@@ -1,0 +1,11 @@
+.main-nav__list {
+  @include list-style;
+}
+
+.main-nav__link {
+  @include link;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

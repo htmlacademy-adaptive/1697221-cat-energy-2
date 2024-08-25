@@ -1,0 +1,17 @@
+.hero {
+  color: $white;
+  background: url("../../images/hero-background-mobile@1x.jpg") no-repeat, linear-gradient($basic-green 302px, $white 302px);
+  text-align: center;
+}
+
+.hero__slogan {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+.hero__button {
+  color: $white;
+  background-color: $basic-green;
+  padding: 10px;
+}
