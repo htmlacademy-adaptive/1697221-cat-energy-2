@@ -2,6 +2,18 @@
   background-color: $basic-grey;
 }
 
+.page-footer__logo-link {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+
 .page-footer__social-list {
   @include list-style;
 }

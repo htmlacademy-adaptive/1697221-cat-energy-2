@@ -23,3 +23,70 @@
   line-height: 24px;
   text-transform: uppercase;
 }
+
+.example__image-changing-toggle {
+  position: relative;
+  display: block;
+  width: 4px;
+  height: 256px;
+  padding: 0;
+  background-color: $special-grey-2;
+  border: none;
+  border-radius: 2px;
+}
+
+.example__image-changing-toggle::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: $white;
+  border: 2px solid $special-grey-2;
+}
+
+.example__image-changing-toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: url("../../icons/stack.svg#slider-arrows-icon");
+  mask-repeat: no-repeat;
+  mask-size: 24px 18px;
+  mask-position: center;
+  background-color: $special-grey-2;
+}
+
+// Наведение
+.example__image-changing-toggle:hover {
+  background-color: $basic-green;
+}
+
+.example__image-changing-toggle:hover::before {
+  border-color: $basic-green;
+}
+
+.example__image-changing-toggle:hover::after {
+  background-color: $basic-green;
+}
+
+
+// Нажатие
+.example__image-changing-toggle:active {
+  background-color: $basic-green-2;
+  opacity: 0.6;
+}
+
+.example__image-changing-toggle:active::before {
+  border-color: $basic-green-2;
+}
+
+.example__image-changing-toggle:active::after {
+  background-color: $basic-green-2;
+}
