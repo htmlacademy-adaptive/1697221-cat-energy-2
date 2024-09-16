@@ -17,7 +17,7 @@
 
   <!-- Шапка -->
 
-  <header class="page-header">
+  <header class="page-header container">
 
     <!-- Лого магазина -->
 
@@ -60,8 +60,9 @@
 
     <!-- Каталог -->
 
-    <h1 class="main-heading heading heading--main">Каталог продукции</h1>
-
+    <div class="container">
+      <h1 class="main-heading heading heading--main">Каталог продукции</h1>
+    </div>
     <!-- Основные товары -->
 
     <section class="assortment">
@@ -273,37 +274,41 @@
       <!-- Дополнительные товары -->
 
       <h2 class="assortment__heading heading">Дополнительные товары</h2>
-      <ul class="assortment__additional-list">
-        <li class="assortment__additional-item additional-card">
-          <h3 class="additional-card__heading heading heading--card">Сахарозаменитель</h3>
-          <span class="additional-card__feature">1 упаковка (100 г)</span>
-          <span class="additional-card__value">200 ₽</span>
-          <a class="additional-card__button button button--main" href="#">Заказать</a>
-        </li>
-        <li class="assortment__additional-item additional-card">
-          <h3 class="additional-card__heading heading heading--card">Питьевая вода</h3>
-          <span class="additional-card__feature">5 литров</span>
-          <span class="additional-card__value">50 ₽</span>
-          <a class="additional-card__button button button--main" href="#">Заказать</a>
-        </li>
-        <li class="assortment__additional-item additional-card">
-          <h3 class="additional-card__heading heading heading--card">Молоко</h3>
-          <span class="additional-card__feature">1 литр</span>
-          <span class="additional-card__value">100 ₽</span>
-          <a class="additional-card__button button button--main" href="#">Заказать</a>
-        </li>
-        <li class="assortment__additional-item additional-card">
-          <h3 class="additional-card__heading heading heading--card">Витамины</h3>
-          <span class="additional-card__feature">1 упаковка (30 г)</span>
-          <span class="additional-card__value">300 ₽</span>
-          <a class="additional-card__button button button--main" href="#">Заказать</a>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="assortment__additional-container ">
+          <ul class="assortment__additional-list">
+            <li class="assortment__additional-item additional-card">
+              <h3 class="additional-card__heading heading heading--card">Сахарозаменитель</h3>
+              <span class="additional-card__feature">1 упаковка (100 г)</span>
+              <span class="additional-card__value">200 ₽</span>
+              <a class="additional-card__button button button--main" href="#">Заказать</a>
+            </li>
+            <li class="assortment__additional-item additional-card">
+              <h3 class="additional-card__heading heading heading--card">Питьевая вода</h3>
+              <span class="additional-card__feature">5 литров</span>
+              <span class="additional-card__value">50 ₽</span>
+              <a class="additional-card__button button button--main" href="#">Заказать</a>
+            </li>
+            <li class="assortment__additional-item additional-card">
+              <h3 class="additional-card__heading heading heading--card">Молоко</h3>
+              <span class="additional-card__feature">1 литр</span>
+              <span class="additional-card__value">100 ₽</span>
+              <a class="additional-card__button button button--main" href="#">Заказать</a>
+            </li>
+            <li class="assortment__additional-item additional-card">
+              <h3 class="additional-card__heading heading heading--card">Витамины</h3>
+              <span class="additional-card__feature">1 упаковка (30 г)</span>
+              <span class="additional-card__value">300 ₽</span>
+              <a class="additional-card__button button button--main" href="#">Заказать</a>
+            </li>
+          </ul>
 
-      <!-- Спецпредложение -->
+          <!-- Спецпредложение -->
 
-      <div class="assortment__banner">
-        <p class="assortment__text">Закажите все и получите чехол для кота в подарок!</p>
+          <div class="assortment__banner">
+            <p class="assortment__text">Закажите все и получите чехол для кота в подарок!</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -311,35 +316,39 @@
 
     <section class="subscribe">
       <h2 class="subscribe__heading heading">Акции и новинки</h2>
-      <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="subscribe__label">
-          <span class="visually-hidden">Введите ваш email.</span>
-          <input class="subscribe__field" name="subscribe-email" type="email" placeholder="кuklachev@gmail.com" required>
-        </label>
-        <button class="subscribe__button button button--main" type="submit">Подписаться</button>
-      </form>
+      <div class="container">
+        <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+        <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="subscribe__label">
+            <span class="visually-hidden">Введите ваш email.</span>
+            <input class="subscribe__field" name="subscribe-email" type="email" placeholder="кuklachev@gmail.com" required>
+          </label>
+          <button class="subscribe__button button button--main" type="submit">Подписаться</button>
+        </form>
+      </div>
     </section>
 
     <!-- Предложение о сотрудничестве и контакты -->
 
     <section class="map">
-      <div class="map__container">
-        <h2 class="visually-hidden">Сотрудничество</h2>
-        <p class="map__heading heading">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="map__address">
-          <p class="map__text">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="map__text">Санкт-Петербург</p>
-        </address>
+      <div class="container">
+        <div class="map__container">
+          <h2 class="visually-hidden">Сотрудничество</h2>
+          <p class="map__heading heading">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="map__address">
+            <p class="map__text">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="map__text">Санкт-Петербург</p>
+          </address>
+        </div>
+        <div class="map__image"></div>
       </div>
-      <div class="map__image"></div>
     </section>
   </main>
 
   <!-- Футер -->
 
   <footer class="page-footer">
-    <div class="page-footer__container">
+    <div class="page-footer__container container">
 
       <!-- Лого магазина -->
 

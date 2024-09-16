@@ -1,12 +1,41 @@
 .show-more {
-  background-image: url("../../icons/stack.svg#plus-icon");
-  background-size: 30px 30px;
-  background-position: center top;
-  background-repeat: no-repeat;
+  padding: 25px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 37px 40px;
+    background-size: 60px 60px;
+    border: 2px solid $basic-grey;
+    align-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 38px 40px;
+  }
 }
 
 .show-more__heading {
   color: #111111;
+}
+
+.show-more__heading::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../icons/stack.svg#plus-icon");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .show-more__text {

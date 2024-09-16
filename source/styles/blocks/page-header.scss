@@ -1,3 +1,22 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.page-header__logo-link {
+  width: 190px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    margin-right: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+  }
+}
+
 .page-header__logo-link:hover {
   opacity: 0.8;
 }

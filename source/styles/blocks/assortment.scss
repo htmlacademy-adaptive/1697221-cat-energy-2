@@ -1,5 +1,21 @@
 .assortment__main-list {
   @include list-style;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: stretch;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding: 0;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
 }
 
 .assortment__main-item {
@@ -11,8 +27,19 @@
   line-height: 24px;
 }
 
+.assortment__additional-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .assortment__additional-list {
   @include list-style;
+
+  @media (min-width: $desktop-width) {
+    width: 896px;
+  }
 }
 
 .additional-card__heading {
@@ -29,6 +56,7 @@
   background-image: url("../../images/catalog/banner/banner-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
   color: $white;
 
   @media (min-resolution: 2dppx) {
@@ -47,6 +75,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 245px;
     background-image: url("../../images/catalog/banner/banner-background-desktop@1x.jpg");
 
     @media (min-resolution: 2dppx) {

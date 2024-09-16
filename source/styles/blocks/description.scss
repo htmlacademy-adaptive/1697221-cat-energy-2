@@ -1,3 +1,8 @@
+.description {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
 .description__heading {
   font-size: 36px;
   line-height: 40px;
@@ -5,6 +10,27 @@
 
 .description__list {
   @include list-style;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+}
+
+.description__item {
+  @media (min-width: $tablet-width) {
+    min-width: 324px;
+    flex-basis: 45%;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 250px;
+    flex-basis: 20%;
+  }
 }
 
 .description__item::before {

@@ -2,7 +2,16 @@
   background-color: $basic-grey;
 }
 
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .page-footer__logo-link {
+  width: 128px;
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -13,7 +22,15 @@
   }
 }
 
-
 .page-footer__social-list {
   @include list-style;
+  width: 132px;
+}
+
+.page-footer__copyright {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+  }
 }
