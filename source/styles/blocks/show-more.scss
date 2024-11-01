@@ -1,25 +1,51 @@
 .show-more {
+  text-align: center;
   padding: 25px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 37px 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 161px 37px 40px;
     background-size: 60px 60px;
-    border: 2px solid $basic-grey;
-    align-self: end;
+    outline: 2px solid $basic-grey;
+    outline-offset: -2px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 50px 38px 40px;
+    padding: 150px  38px 40px;
+  }
+}
+
+.show-more__content-wrapper {
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
 .show-more__heading {
   color: #111111;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 17px;
+    margin-bottom: 26px;
+  }
 }
 
 .show-more__heading::before {
   content: "";
   display: block;
+  margin: 0 auto;
   width: 30px;
   height: 30px;
   background-image: url("../../icons/stack.svg#plus-icon");
@@ -28,9 +54,13 @@
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
     width: 60px;
     height: 60px;
     margin-bottom: 50px;
+    top: -107px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: $desktop-width) {
@@ -41,4 +71,21 @@
 .show-more__text {
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 84px;
+  }
+}
+
+.show-more__button {
+  padding: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

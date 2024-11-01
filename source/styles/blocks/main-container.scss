@@ -1,3 +1,16 @@
 .main-container {
-  padding: 0 20px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.main-container--inner-page {
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+  }
 }

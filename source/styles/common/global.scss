@@ -5,15 +5,25 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 img {
   display: block;
   width: 100%;
   object-fit: contain;
 }
 
+picture {
+  display: contents;
+}
+
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: $min-width;
+  min-height: 100%;
   margin: 0;
-  font-family: $base-font;
-  font-size: 14px;
-  line-height: 18px;
 }

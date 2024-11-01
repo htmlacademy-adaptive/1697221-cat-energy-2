@@ -1,15 +1,40 @@
 .page-header {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 55px 50px 5px;
+    margin-bottom: 24px;
+  }
 }
 
+.page-header--inner {
+  @media (max-width: $mobile-width) {
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
 
 .page-header__logo-link {
-  width: 190px;
+  width: 210px;
+  padding-left: 20px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+
 
   @media (min-width: $tablet-width) {
     width: 174px;
-    margin-right: 95px;
+    margin-right: 85px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {

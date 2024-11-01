@@ -1,6 +1,5 @@
 .container {
   min-width: 280px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -9,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1220px;
-    padding: 0;
+    width: 1320px;
+    padding: 0 50px;
   }
 }

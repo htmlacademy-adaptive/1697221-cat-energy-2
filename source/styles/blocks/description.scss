@@ -1,46 +1,83 @@
 .description {
   padding-top: 20px;
   padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    border: none;
+  }
 }
 
+
 .description__heading {
-  font-size: 36px;
-  line-height: 40px;
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .description__list {
   @include list-style;
-  display: flex;
-  flex-flow: column wrap;
-  row-gap: 20px;
+  display: grid;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    row-gap: 30px;
+    counter-reset: item 0;
+    grid-template-columns: repeat(2, minmax(324px, 599px));
+    gap: 37px 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    grid-template-columns: repeat(4, 250px);
+    gap: 37px 75px;
   }
 }
 
 .description__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
   @media (min-width: $tablet-width) {
-    min-width: 324px;
-    flex-basis: 45%;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    counter-increment: item 1;
+    padding-top: 40px;
+    padding-right: 74px;
+    padding-bottom: 57px;
+    min-height: 280px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 250px;
-    flex-basis: 20%;
+    padding-right: 5px;
   }
 }
 
 .description__item::before {
   content: "";
   display: block;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    min-width: 80px;
+    height: 80px;
+  }
 }
 
 .description__item--beneficial-nutrients::before {
@@ -61,4 +98,65 @@
 .description__item--resultes-time::before {
   background-image: url("../../icons/stack.svg#clock-icon");
   background-size: 26px 30px;
+}
+
+.description__item::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: counter(item);
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-grey;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .description__item::after {
+    right: 75px;
+  }
+
+  .description__item:nth-child(1)::after {
+    right: 100px;
+  }
+
+  .description__item:nth-child(2)::after {
+    right: 79px;
+  }
+
+  .description__item:nth-child(3)::after {
+    right: 77px;
+  }
+}
+
+.description__text {
+  margin: 0;
+}
+
+.description__text br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .description__item::after {
+    right: 1px;
+  }
+
+  .description__item:nth-child(1)::after {
+    right: 26px;
+  }
+
+  .description__item:nth-child(2)::after {
+    right: 5px;
+  }
+
+  .description__item:nth-child(3)::after {
+    right: 3px;
+  }
 }

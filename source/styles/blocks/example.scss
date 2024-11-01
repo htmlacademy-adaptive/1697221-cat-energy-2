@@ -1,41 +1,232 @@
 .example {
+  padding-top: 25px;
+  padding-bottom: 39px;
   background-color: $secondary-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 101px;
+    background-color: $white;
+    background-image: linear-gradient($white 57.3%, $secondary-grey 57.3%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+    background-image: linear-gradient($white 22.5%, $secondary-grey 22.5%);
+  }
+}
+
+.example .container {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 52% 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto 560px;
+  }
 }
 
 .example__heading {
-  font-size: 36px;
-  line-height: 40px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/3;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    margin-bottom: 146px;
+  }
+}
+
+.example__desc {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/3;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    max-width: 433px;
+    margin-bottom: 68px;
+  }
 }
 
 .example__list {
   @include list-style;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    width: 366px;
+    margin-bottom: 55px;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .example__index {
+  order: 2;
+  text-transform: lowercase;
+  padding: 0 8px;
   font-size: 12px;
   line-height: 12px;
-  text-transform: lowercase;
+  background-color: $secondary-grey;
+  margin-top: -10px;
+  width: 87px;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-top: -9px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $secondary-grey;
+  }
 }
 
 .example__value {
+  padding-top: 15px;
+  padding-bottom: 16px;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  order: 1;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    padding-bottom: 18px;
+  }
 }
 
-.example__image-changing-toggle {
+.example__text {
+  margin: 0;
+  text-align: center;
+  font-family: $secondary-font;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 11px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+.example__text-sum {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 63px;
+  }
+}
+
+.example__slider {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 280px;
+  height: 256px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/3;
+    margin-top: 79px;
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/6;
+    margin-top: 0;
+  }
+}
+
+.example__slider-image-container {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 0;
+}
+
+.example__slider-image-before {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.example__slider-image-after {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.example__slider-image {
+  display: block;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__slider-toggle {
   position: relative;
   display: block;
   width: 4px;
   height: 256px;
   padding: 0;
+  cursor: pointer;
   background-color: $special-grey-2;
   border: none;
   border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+  }
 }
 
-.example__image-changing-toggle::before {
+.example__slider-toggle::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -48,7 +239,7 @@
   border: 2px solid $special-grey-2;
 }
 
-.example__image-changing-toggle::after {
+.example__slider-toggle::after {
   content: "";
   position: absolute;
   width: 24px;
@@ -64,29 +255,29 @@
 }
 
 // Наведение
-.example__image-changing-toggle:hover {
+.example__slider-toggle:hover {
   background-color: $basic-green;
 }
 
-.example__image-changing-toggle:hover::before {
+.example__slider-toggle:hover::before {
   border-color: $basic-green;
 }
 
-.example__image-changing-toggle:hover::after {
+.example__slider-toggle:hover::after {
   background-color: $basic-green;
 }
 
 
 // Нажатие
-.example__image-changing-toggle:active {
+.example__slider-toggle:active {
   background-color: $basic-green-2;
   opacity: 0.6;
 }
 
-.example__image-changing-toggle:active::before {
+.example__slider-toggle:active::before {
   border-color: $basic-green-2;
 }
 
-.example__image-changing-toggle:active::after {
+.example__slider-toggle:active::after {
   background-color: $basic-green-2;
 }

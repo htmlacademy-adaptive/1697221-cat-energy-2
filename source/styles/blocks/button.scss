@@ -3,10 +3,16 @@
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .button--main {
@@ -24,7 +30,7 @@
   }
 }
 
-.button-additional {
+.button--additional {
   color: $dark-grey;
   background-color: $basic-grey;
 

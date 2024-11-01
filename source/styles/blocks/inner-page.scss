@@ -1,0 +1,11 @@
+.inner-page__main-heading {
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 165px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 165px;
+  }
+}

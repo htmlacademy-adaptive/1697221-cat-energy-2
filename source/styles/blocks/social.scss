@@ -18,6 +18,10 @@
   background-color: $special-grey-2;
 }
 
+.social__link:focus {
+  outline: none;
+}
+
 .social__link:hover::before,
 .social__link:focus::before {
   background-color: $basic-green;
