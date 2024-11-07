@@ -33,3 +33,9 @@
     width: 118px;
   }
 }
+
+.header-logo-link--catalog .header-logo-link__name-image {
+  @media (max-width: $mobile-width) {
+    margin-top: 5px;
+  }
+}

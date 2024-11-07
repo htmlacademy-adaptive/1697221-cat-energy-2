@@ -118,6 +118,7 @@
   border-radius: 3px;
   order: 1;
   flex-grow: 1;
+  color: $black;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -132,6 +133,7 @@
   font-family: $secondary-font;
   line-height: 20px;
   text-transform: uppercase;
+  color: $black;
 
   @media (min-width: $tablet-width) {
     padding-top: 11px;

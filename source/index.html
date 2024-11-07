@@ -11,13 +11,17 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
+  <link rel="preload" href="/source/fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/source/fonts/oswald/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
 
 <body class="page__body page__body--index">
 
   <!-- Шапка -->
 
-  <header class="page-header">
+  <header class="page-header" data-test="header">
     <!-- Лого магазина -->
 
     <a class="page-header__logo-link header-logo-link" href="#">
@@ -59,7 +63,7 @@
 
     <!-- Блок Hero -->
 
-    <section class="hero">
+    <section class="hero" data-test="hero">
       <div class="container">
         <h1 class="hero__heading heading heading--main">Функциональное питание для котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
@@ -79,7 +83,7 @@
 
     <!-- Программы питания -->
 
-    <section class="programs container">
+    <section class="programs container" data-test="programs">
       <h2 class="visually-hidden">Программы питания</h2>
       <ul class="programs__list">
         <li class="programs__item programs__item--loss">
@@ -97,7 +101,7 @@
 
     <!-- Как это работает -->
 
-    <section class="description">
+    <section class="description" data-test="features">
       <div class="container">
         <h2 class="description__heading heading heading--section">Как это работает</h2>
         <ul class="description__list">
@@ -119,7 +123,7 @@
 
     <!-- Живой пример -->
 
-    <section class="example">
+    <section class="example" data-test="proof">
       <div class="container">
         <h2 class="example__heading heading heading--section">Живой пример</h2>
         <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -144,7 +148,7 @@
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/example/fat-cat-tablet-desktop@1x.png 1x, images/index/example/fat-cat-tablet-desktop@2x.png 2x">
 
               <source width="280" height="256" type="image/webp" srcset="images/index/example/fat-cat-tablet-desktop@1x.webp 1x, images/index/example/fat-cat-tablet-desktop@2x.webp 2x">
-              <img class="example__slider-image example__slider-image--fat-cat" src="images/index/example/fat-cat-mobile@1x.png" srcset="images/index/example/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстенький котик.">
+              <img class="example__slider-image example__slider-image--fat-cat" src="images/index/example/fat-cat-mobile@1x.png" srcset="images/index/example/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Толстенький котик." loading="lazy">
             </picture>
           </div>
           <button class="example__slider-toggle" type="button">
@@ -159,7 +163,7 @@
               <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/index/example/slim-cat-tablet-desktop@1x.png 1x, images/index/example/slim-cat-tablet-desktop@2x.png 2x">
 
               <source width="280" height="256" type="image/png" srcset="images/index/example/slim-cat-tablet-desktop@1x.webp 1x, images/index/example/slim-cat-tablet-desktop@2x.webp 2x">
-              <img class="example__slider-image example__slider-image--slim-cat" src="images/index/example/slim-cat-mobile@1x.png" srcset="images/index/example/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Худенький котик.">
+              <img class="example__slider-image example__slider-image--slim-cat" src="images/index/example/slim-cat-mobile@1x.png" srcset="images/index/example/slim-cat-mobile@2x.png 2x" width="280" height="256" alt="Худенький котик." loading="lazy">
             </picture>
           </div>
         </div>
@@ -168,7 +172,7 @@
 
     <!-- Предложение о сотрудничестве и контакты -->
 
-    <section class="map">
+    <section class="map" data-test="contacts">
 
       <div class="container">
         <div class="map__wrapper">
@@ -184,14 +188,14 @@
         <noscript>
           <div class="map__location-fallback"></div>
         </noscript>
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=16.69" allowfullscreen title="Адрес магазина: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b7cdf00004b3ff7c8e7dce506c8a33eed1f9c191997d0c1b5e666713a78aa0b&amp;source=constructor" allowfullscreen title="Адрес магазина: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" loading="lazy"></iframe>
       </div>
     </section>
   </main>
 
   <!-- Футер -->
 
-  <footer class="page-footer">
+  <footer class="page-footer" data-test="footer">
     <div class="container">
       <!-- Лого магазина -->
 

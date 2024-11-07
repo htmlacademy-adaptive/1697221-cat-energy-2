@@ -50,10 +50,18 @@
   position: absolute;
   width: 1000%;
   left: -1000%;
-  top: 45%;
+  top: 10px;
   transform: translateY(-50%);
   height: 2px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
 }
 
 .heading--inner::after {
@@ -61,10 +69,18 @@
   position: absolute;
   width: 1000%;
   right: -1000%;
-  top: 45%;
+  top: 10px;
   transform: translateY(-50%);
   height: 2px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
 }
 
 
