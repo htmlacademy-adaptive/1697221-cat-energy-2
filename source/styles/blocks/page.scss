@@ -1,0 +1,13 @@
+.page__body {
+  position: relative;
+  font-family: $base-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

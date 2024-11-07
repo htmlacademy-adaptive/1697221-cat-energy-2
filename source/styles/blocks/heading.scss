@@ -1,0 +1,96 @@
+.heading {
+  font-family: $secondary-font;
+  font-weight: 400;
+  margin: 0;
+  color: $black;
+}
+
+.heading--main {
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.heading--section {
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.heading--inner {
+  position: relative;
+  width: fit-content;
+  font-size: 24px;
+  line-height: 1;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-left: -40px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    font-size: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+    font-size: 40px;
+  }
+}
+
+.heading--inner::before {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  left: -1000%;
+  top: 10px;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
+}
+
+.heading--inner::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  right: -1000%;
+  top: 10px;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
+}
+
+
+.heading--card {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
